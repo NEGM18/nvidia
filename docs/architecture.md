@@ -63,7 +63,7 @@ Three-layer protection:
 
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
-| LLM | Google Gemini 2.0 Flash | Answer generation, summarization, evaluation |
+| LLM |qwen2.5:0.5b | Answer generation, summarization, evaluation |
 | Embeddings | all-MiniLM-L6-v2 (HuggingFace) | Semantic vector embeddings |
 | Vector Store | FAISS | Fast similarity search |
 | Framework | LangChain | Chain composition, prompt management |
