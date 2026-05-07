@@ -2,7 +2,7 @@
 
 An AI-powered web application that allows users to upload documents, then interact with them through intelligent question answering with source citations and guard-rails.
 
-Built with **LangChain**, **FAISS**, **Google Gemini**, **FastAPI**, **LangServe**, and **Gradio**.
+Built with **LangChain**, **FAISS**, **ollama**, **FastAPI**, **LangServe**, and **Gradio**.
 
 ---
 
