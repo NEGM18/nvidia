@@ -16,6 +16,7 @@ Built with **LangChain**, **FAISS**, **ollama**, **FastAPI**, **LangServe**, and
 - **💬 Chat History** — Multi-turn conversational context tracking
 - **⚡ Fast Retrieval** — FAISS vector store with HuggingFace embeddings
 - **📊 Evaluation Pipeline** — LLM-as-a-Judge metrics for quality assurance
+- **🏠 Fully Local** — Runs entirely on your machine via Ollama, no API keys needed
 
 ---
 
