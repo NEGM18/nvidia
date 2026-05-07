@@ -33,7 +33,7 @@ User ──► Gradio UI (Upload/Chat/Summary)
   Pipeline   + RAG      (Map-Reduce)
      │        │
      ▼        ▼
-   FAISS    Guard-Rails ──► Gemini LLM
+   FAISS    Guard-Rails ──► ollama (Qwen2.5)
    Vector     (3-layer)
    Store
 ```
@@ -96,7 +96,17 @@ git clone <repo-url>
 cd nvidia
 ```
 
-### 2. Create Virtual Environment
+### 2. Install & Start Ollama
+
+```bash
+# Pull the default model
+ollama pull qwen2.5:0.5b
+
+# Or for better quality (requires more RAM)
+ollama pull qwen2.5:7b
+```
+
+### 3. Create Virtual Environment
 
 ```bash
 python -m venv venv
@@ -104,23 +114,22 @@ venv\Scripts\activate  # Windows
 # or: source venv/bin/activate  # Linux/Mac
 ```
 
-### 3. Install Dependencies
+### 4. Install Dependencies
 
-```bash
+```BASH
 pip install -r requirements.txt
 ```
 
-### 4. Configure Environment
-
-Edit the `.env` file with your settings:
-
+### 5. Configure Environment
+The default `.env` file is pre-configured for Ollama. No API keys required!
 ```env
-LLM_PROVIDER=gemini
-GOOGLE_API_KEY=your_api_key_here
-GEMINI_MODEL=gemini-2.0-flash
+# LLM Configuration
+LLM_PROVIDER=ollama
+OLLAMA_MODEL=qwen2.5:0.5b
+OLLAMA_BASE_URL=http://localhost:11434
 ```
 
-### 5. Run the Application
+### 6. Run the Application
 
 **Option A: Gradio UI (Recommended for Demo)**
 ```bash
